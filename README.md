@@ -97,4 +97,3 @@ A summary of the available API routes. All protected routes require a `Bearer To
 ## 📄 License
 
 This project is distributed under the MIT License. See `LICENSE` for more information.
-# blog-api-nodejs
