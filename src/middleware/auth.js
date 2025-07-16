@@ -15,11 +15,11 @@ import jwt from "jsonwebtoken"; // استيراد مكتبة JWT
     // Bearer eyJhbGciOiJI...
     const justToken = token.split(' ')[1];
     const decoded = jwt.verify(justToken, process.env.JWT_SECRET);
-
+console.error('JWT verification error:', err); 
     // أضف بيانات المستخدم (payload) إلى كائن الطلب (req)
     req.user = decoded; 
     next(); // انتقل إلى الدالة التالية (منطق المسار)
   } catch (ex) {
     res.status(400).json({ error: 'Invalid token.' });
   }
-};
+};  
