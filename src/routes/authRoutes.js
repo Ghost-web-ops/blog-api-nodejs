@@ -24,7 +24,7 @@ router.get('/auth/google/callback',
       { expiresIn: '7d' }
     );
     const frontendURL = process.env.CLIENT_REDIRECT_URL;
-    res.redirect(`${frontendURL}?token=${token}`);
+    res.redirect(`${frontendURL}/?token=${token}`);
     // هنا يمكنك إعادة توجيه المستخدم إلى الواجهة الأمامية مع التوكن
     // (سنتعامل مع هذا الجزء لاحقًا في الفرونت اند)
   }
