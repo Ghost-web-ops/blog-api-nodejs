@@ -27,7 +27,6 @@ router.get('/auth/google/callback',
     res.redirect(`${frontendURL}?token=${token}`);
     // هنا يمكنك إعادة توجيه المستخدم إلى الواجهة الأمامية مع التوكن
     // (سنتعامل مع هذا الجزء لاحقًا في الفرونت اند)
-    res.status(200).json({ token });
   }
 );
 
