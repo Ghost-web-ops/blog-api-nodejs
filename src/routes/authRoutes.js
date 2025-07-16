@@ -16,6 +16,7 @@ router.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login',
     session: false, }), // نستخدم session: false لأننا سنعتمد على JWT
   (req, res) => {
+    console.log("User from Google:", req.user);
     // إذا نجحت المصادقة، سيقوم passport بإضافة كائن user إلى الطلب (req)
     // الآن، نقوم بإنشاء توكن JWT خاص بنا لهذا المستخدم
     const token = jwt.sign(
