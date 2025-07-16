@@ -7,7 +7,7 @@ passport.use(new GoogleStrategy({
     // 1. خيارات استراتيجية Google
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "/api/auth/google/callback" // الرابط الذي سيعود إليه Google
+    callbackURL: process.env.GOOGLE_CLIENT_URL // الرابط الذي سيعود إليه Google
   },
   async (accessToken, refreshToken, profile, done) => {
     // 2. هذه الدالة تعمل بعد أن يسجل المستخدم دخوله بنجاح في Google
